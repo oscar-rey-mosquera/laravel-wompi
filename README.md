@@ -6,7 +6,7 @@
 <a href="https://packagist.org/packages/oscar-rey/laravel-wompi"><img src="https://img.shields.io/packagist/dt/oscar-rey/laravel-wompi" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/oscar-rey/laravel-wompi"><img src="https://img.shields.io/packagist/v/oscar-rey/laravel-wompi" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/oscar-rey/laravel-wompi"><img src="https://img.shields.io/packagist/l/oscar-rey/laravel-wompi" alt="License"></a>
- <a href="https://packagist.org/packages/oscar-rey/laravel-wompi"><img src="https://github.com/oscar-rey-mosquera/laravel-wompi/actions/workflows/test.yml/badge.svg" alt="Test"></a>
+ <a href="https://github.com/oscar-rey-mosquera/laravel-wompi/actions/workflows/test.yml"><img src="https://github.com/oscar-rey-mosquera/laravel-wompi/actions/workflows/test.yml/badge.svg" alt="Test"></a>
 </p>
 
 ## 💻 Instalación
