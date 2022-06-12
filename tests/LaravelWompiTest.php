@@ -15,6 +15,8 @@ class LaravelWompiTest extends TestCase
     public function verify_class_wompi()
     {
         $response = Wompi::acceptance_token();
+
+        dd(Wompi::getTokens());
  
         $this->assertObjectHasAttribute('data', $response);
     }
