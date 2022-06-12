@@ -8,3 +8,42 @@
 <a href="https://packagist.org/packages/oscar-rey/laravel-wompi"><img src="https://img.shields.io/packagist/l/oscar-rey/laravel-wompi" alt="License"></a>
  <a href="https://packagist.org/packages/oscar-rey/laravel-wompi"><img src="https://github.com/oscar-rey-mosquera/laravel-wompi/actions/workflows/test.yml/badge.svg" alt="Test"></a>
 </p>
+
+## 💻 Instalación
+
+Para instalar utiliza [composer](https://getcomposer.org/).
+
+```.bash  
+composer require oscar-rey/laravel-wompi
+```
+
+## 🔧 Configuración
+
+```bash
+//.env
+WOMPI_PUBLIC_KEY=public_key
+WOMPI_PRIVATE_KEY=private_key
+WOMPI_PRIVATE_EVENT_KEY=private_event
+```
+
+## Usa el middleware en tu ruta de webhooks
+
+```php
+use LaravelWompi\Http\Middleware\CheckWompiWebHookMiddleware;
+ 
+Route::post('/bancolombia/wompi/webhook', function () {
+    //
+})->middleware(CheckWompiWebHookMiddleware::class);
+```
+
+## Documentación
+
+Este paquete es una envoltura del paquete wompi-php para laravel por ende la documentación es totalmente compatible con el uso de este [Wompi-php-documentación](https://github.com/oscar-rey-mosquera/wompi-php).
+
+## Contribución
+
+Puedes contribuir agregando nuevas funcionalidades, actualizaciones,  refactorización de código y notificando errores, con antelación se agradece.
+
+## License
+
+[MIT license](LICENSE).
