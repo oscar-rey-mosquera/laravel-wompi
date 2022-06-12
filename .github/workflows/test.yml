@@ -30,7 +30,7 @@ jobs:
         with:
           php_extensions: xdebug
           bootstrap: vendor/autoload.php
-          configuration: test/phpunit.xml
+          configuration: phpunit.xml
           args: --coverage-text
         env:
          WOMPI_PUBLIC_KEY: ${{secrets.WOMPI_PUBLIC_KEY}}
