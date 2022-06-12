@@ -3,6 +3,20 @@
     "description": "Wrapper de wompi-php para laravel",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "Wompi",
+        "php",
+        "Bancolombia",
+        "nequi",
+        "wompi-php",
+        "pagos",
+        "online",
+        "laravel",
+        "wrapper",
+        "wompi-laravel",
+        "wompi-laravel-wrapper"
+
+    ],
     "autoload": {
         "psr-4": {
             "LaravelWompi\\": "src/"
