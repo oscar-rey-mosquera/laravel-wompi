@@ -1,0 +1,38 @@
+{
+    "name": "oscar-rey/laravel-wompi",
+    "description": "Wrapper de wompi-php para laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LaravelWompi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "LaravelWompi\\Tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oscar Rey",
+            "email": "oscarhumberto1311@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^7.5"
+    },
+    "require": {
+        "bancolombia-dev/wompi-php": "^1.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelWompi\\LaravelWompiProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    }
+}
