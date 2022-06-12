@@ -15,10 +15,7 @@ jobs:
         with:
          php-version: '8.1'
          tools: composer:v2
-        env:
-         WOMPI_PUBLIC_KEY: ${{secrets.WOMPI_PUBLIC_KEY}}
-         WOMPI_PRIVATE_KEY: ${{secrets.WOMPI_PRIVATE_KEY}}
-         WOMPI_PRIVATE_EVENT_KEY: ${{secrets.WOMPI_PRIVATE_EVENT_KEY}}
+
       - name: Validate composer.json and composer.lock
         run: composer validate --strict
 
@@ -28,5 +25,14 @@ jobs:
       - name: copy phpunit.example to phpunit
         run: cp phpunit.example.xml phpunit.xml
 
-      - name: Run test
-        run: composer run test
+      - name: Run Tests
+        uses: php-actions/phpunit@v2
+        with:
+          php_extensions: xdebug
+          bootstrap: vendor/autoload.php
+          configuration: test/phpunit.xml
+          args: --coverage-text
+        env:
+         WOMPI_PUBLIC_KEY: ${{secrets.WOMPI_PUBLIC_KEY}}
+         WOMPI_PRIVATE_KEY: ${{secrets.WOMPI_PRIVATE_KEY}}
+         WOMPI_PRIVATE_EVENT_KEY: ${{secrets.WOMPI_PRIVATE_EVENT_KEY}}
